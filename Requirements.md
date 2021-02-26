@@ -41,6 +41,15 @@ TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
 ###Usuários
 
 ####Dados
+NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---        | ---        | ---       | ---         | ---      | --- 
+idUsuarioPk | `int`      | `default` | SIM         | SIM      | Id principal da campanha.
+Nome        | `string`   | `256`     | SIM         | SIM      | Titulo da campanha.
+CPF         | `string`   | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
+DataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
+|||||
+idEnderecoFk| `int`      | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
+
 - TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
 
 
