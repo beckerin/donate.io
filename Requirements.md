@@ -1,7 +1,7 @@
 #Lista de requerimentos
 
 
-###Campanhas
+###Campanha
 
 ####Dados
  NOME       | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO 
@@ -12,8 +12,7 @@ descricao   | `string`   | `1024`    | SIM         | SIM      | Descição da ca
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
 dataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
 |||||
-idAuthorFk      | `int`  | `default` | SIM         | NÃO      | [Id do Author](#Usuários)
-idAlteracaoFk   | `int`  | `default` | NÃO         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
+idUsuarioPk | `int`      | `default` | SIM         | NÃO      | [Id do Author](#Usuários)
 
 TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
 
@@ -115,3 +114,16 @@ NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
 idEstadoPk  | `int`      | `default` | SIM         | SIM      | Id do estado.
 nome        | `string`   | `19`      | SIM         | SIM      | Nome do estado.
+
+
+###Alterações
+####Dados
+NOME         | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---         | ---        | ---       | ---         | ---      | --- 
+idAlteracaoPk| `int`      | `default` | SIM         | SIM      | Id da alteração.
+antes        | `json`     | `default` | SIM         | SIM      | Campanha `antes` da alteração
+depois       | `json`     | `default` | SIM         | SIM      | Campanha `após` da alteração
+data         | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
+||||||
+idCampanhaFk | `int`      | `default` | SIM         | SIM      | [Id da campanha alterada](#Campanha).
+idUsuarioFk  | `int`      | `default` | SIM         | SIM      | [Id responsável pela](#Usuários). 
