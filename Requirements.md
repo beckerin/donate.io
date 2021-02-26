@@ -47,10 +47,11 @@ idUsuarioPk | `int`      | `default` | SIM         | SIM      | Id do usuário.
 nome        | `string`   | `256`     | SIM         | SIM      | Nome do usuário.
 apelido     | `string`   | `256`     | NÃO         | SIM      | Apelido do usuário.
 email       | `string`   | `256`     | SIM         | SIM      | Email do usuário.
-cpf         | `string`   | `11  `    | SIM         | SIM      | CPF do usuário.
+cpf         | `long`     | `11`      | SIM         | SIM      | CPF do usuário.
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
 |||||
 idEnderecoFk| `int`      | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
+idTipoFk    | `int`      | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
 
 - TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
 
