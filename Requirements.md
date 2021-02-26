@@ -7,10 +7,10 @@
  NOME       | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO 
  ---        | ---        | ---       | ---         | ---      | --- 
 idCampanhaPk| `int`      | `default` | SIM         | SIM      | Id principal da campanha.  
-Titulo      | `string`   | `256`     | SIM         | SIM      | Titulo da campanha.
-Descricao   | `string`   | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
-DataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
-DataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
+titulo      | `string`   | `256`     | SIM         | SIM      | Titulo da campanha.
+descricao   | `string`   | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
+dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
+dataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
 |||||
 idAuthorFk      | `int`  | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
 idAlteracaoFk   | `int`  | `default` | NÃO         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
@@ -43,10 +43,12 @@ TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
 ####Dados
 NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
-idUsuarioPk | `int`      | `default` | SIM         | SIM      | Id principal da campanha.
-Nome        | `string`   | `256`     | SIM         | SIM      | Titulo da campanha.
-CPF         | `string`   | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
-DataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
+idUsuarioPk | `int`      | `default` | SIM         | SIM      | Id do usuário.
+nome        | `string`   | `256`     | SIM         | SIM      | Nome do usuário.
+apelido     | `string`   | `256`     | NÃO         | SIM      | Apelido do usuário.
+email       | `string`   | `256`     | SIM         | SIM      | Email do usuário.
+cpf         | `string`   | `11  `    | SIM         | SIM      | CPF do usuário.
+dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
 |||||
 idEnderecoFk| `int`      | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
 
