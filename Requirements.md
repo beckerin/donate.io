@@ -1,6 +1,5 @@
 #Lista de requerimentos
 
-
 ###Campanha
 
 ####Dados
@@ -12,9 +11,7 @@ descricao   | `string`   | `1024`    | SIM         | SIM      | Descição da ca
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
 dataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
 |||||
-idUsuarioPk | `int`      | `default` | SIM         | NÃO      | [Id do Author](#Usuários)
-
-TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
+idUsuarioPk | `int`      | `default` | SIM         | SIM      | [Id do Author](#Usuários)
 
 ####Funções
 - Poderão ser criadas `APENAS` por `Usuários` previamente cadastrados.
@@ -48,30 +45,13 @@ apelido     | `string`   | `256`     | NÃO         | SIM      | Apelido do usu�
 email       | `string`   | `256`     | SIM         | SIM      | Email do usuário.
 cpf         | `long`     | `11`      | SIM         | SIM      | CPF do usuário.
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
+verificado  | `boolean`  | `default` | SIM         | SIM      | Variável para identificar email verificado.   
 |||||
-idEnderecoFk| `int`      | `default` | SIM         | NÃO      | [Id do Endereço](#Endereço)
-idTipoFk    | `int`      | `default` | SIM         | NÃO      | [Id do Tipo de usuário](#Tipos de Usuários)
-
-- TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
-
+idEnderecoFk| `int`      | `default` | SIM         | SIM      | [Id do Endereço](#Endereço)
+idTipoFk    | `int`      | `default` | SIM         | SIM      | [Id do Tipo de usuário](#Tipos de Usuários)
 
 ####Funções
 - Poderão ser `criados` a partir de usuários não logados.
-- Podem alterar o seu próprio cadastro.
-- `Usuários` não podem apagar o seu próprio `usuário`, apenas a sua utilização será bloqueada.
-- Deverão ter cadastro `verificado` para fazer `doações`.
-- Podem `criar campanhas` para ajudar a `sí mesmo` ou `familiares próximos`.
-- Poderão interagir através de `comentários` na `campanha`.
-
-
-
-###Administrador
- - Será um dos `tipos de usuário`.
-
-####Funções
-- Poderá `criar` `alterar` `remover` `campanhas` ou `usuários`.
-- Ficará a cargo de `verificar` cada `campanha` para ser publicamente `iniciada`.
-- Deverá `editar` ou `excluir` `campanhas` ou `comentários` que fujam das regras ou conforme necessidade.
 
 ###Tipos de Usuários
 ####Dados
@@ -83,9 +63,30 @@ nome        | `string`   | `13`      | SIM         | SIM      | Nome do tipo do 
 ####Funções
 Tipos de `Usuário`:
   0. Administrador: Controle total sobre o sistema.
-  1. Moderador: Controle dos grupos abaixo.
-  2. Normal: Controle apenas do próprio `usuário` ou `campanha`.
+     - Poderá `criar` `alterar` `remover` `campanhas` ou `usuários`.
+     - Controle dos grupos abaixo.
+  
+
+  1. Moderador:
+     - Deverá `editar` ou `excluir` `campanhas` ou `comentários` que fujam das regras ou conforme necessidade.
+     - Ficará a cargo de `verificar` cada `campanha` para ser publicamente `iniciada`.
+     - Não pode fazer alterações dos `usuários`.
+  
+    
+  2. Normal:
+     - Poderão interagir através de `comentários` na `campanha`.
+     - Podem `criar campanhas` para ajudar a `sí mesmo` ou `familiares próximos`.
+     - Deverão ter cadastro `verificado` para fazer `doações`.  
+     - Controle apenas do próprio `usuário` ou `campanha`.
+       - Pode alterar o seu próprio `Usuário`.
+       - `Não` podem apagar o seu próprio `usuário`.
+       - Pode alterar a sua própria `Campanha`.
+  
+
   3. Desabilitado.
+     - Deixará de poder fazer `login` e perderá todos os privilégios do tipo normal.
+     - Será usado como forma de `deletar` o usuário.
+
 
 ###Endereço
 ####Dados
