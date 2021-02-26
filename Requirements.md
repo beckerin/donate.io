@@ -12,7 +12,7 @@ descricao   | `string`   | `1024`    | SIM         | SIM      | Descição da ca
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
 dataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
 |||||
-idAuthorFk      | `int`  | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
+idAuthorFk      | `int`  | `default` | SIM         | NÃO      | [Id do Author](#Usuários)
 idAlteracaoFk   | `int`  | `default` | NÃO         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
 
 TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
@@ -50,8 +50,8 @@ email       | `string`   | `256`     | SIM         | SIM      | Email do usuári
 cpf         | `long`     | `11`      | SIM         | SIM      | CPF do usuário.
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
 |||||
-idEnderecoFk| `int`      | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
-idTipoFk    | `int`      | `default` | SIM         | NÃO      | TODO: [#5](https://github.com/beckerin/donate.io/issues/5)
+idEnderecoFk| `int`      | `default` | SIM         | NÃO      | [Id do Endereço](#Endereço)
+idTipoFk    | `int`      | `default` | SIM         | NÃO      | [Id do Tipo de usuário](#Tipos de Usuários)
 
 - TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
 
