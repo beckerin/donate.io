@@ -74,11 +74,44 @@ idTipoFk    | `int`      | `default` | SIM         | NÃO      | TODO: [#5](http
 - Ficará a cargo de `verificar` cada `campanha` para ser publicamente `iniciada`.
 - Deverá `editar` ou `excluir` `campanhas` ou `comentários` que fujam das regras ou conforme necessidade.
 
+###Tipos de Usuários
+####Dados
+NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---        | ---        | ---       | ---         | ---      | --- 
+idTipoPk    | `int`      | `default` | SIM         | SIM      | Id tipo de usuário.
+nome        | `string`   | `13`      | SIM         | SIM      | Nome do tipo do usuário.
+
+####Funções
+Tipos de `Usuário`:
+  0. Administrador: Controle total sobre o sistema.
+  1. Moderador: Controle dos grupos abaixo.
+  2. Normal: Controle apenas do próprio `usuário` ou `campanha`.
+  3. Desabilitado.
 
 ###Endereço
 ####Dados
-####Funções
+NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---        | ---        | ---       | ---         | ---      | --- 
+idEnderecoPk| `int`      | `default` | SIM         | SIM      | Id do endereço.
+rua         | `string`   | `64`      | SIM         | SIM      | Nome de sua rua/avenida
+cep         | `number`   | `9`       | SIM         | SIM      | Numero do seu CEP
+bairro      | `string`   | `128`     | NÃO         | SIM      | Nome de seu bairro
+complemento | `string`   | `128`     | NÃO         | SIM      | Complemento de seu endereço
+||||||
+idCidadeFk  | `int`      | `default` | SIM         | SIM      | [Id da cidade](#Cidades)
+idEstadoFk  | `int`      | `default` | SIM         | SIM      | [Id do estado](#Estados)
 
-###Tipos de Usuários
+
+###Cidades
 ####Dados
-####Funções
+NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---        | ---        | ---       | ---         | ---      | --- 
+idCidadePk  | `int`      | `default` | SIM         | SIM      | Id da cidade.
+nome        | `string`   | `29`      | SIM         | SIM      | Nome da cidade.
+
+###Estados
+####Dados
+NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---        | ---        | ---       | ---         | ---      | --- 
+idEstadoPk  | `int`      | `default` | SIM         | SIM      | Id do estado.
+nome        | `string`   | `19`      | SIM         | SIM      | Nome do estado.
