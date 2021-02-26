@@ -27,9 +27,8 @@ As questões avaliativas e suas respectivas issues são:
 - Dicionário de Dados `DIO-012` [#12](https://github.com/beckerin/donate.io/issues/12)
 - Modelagem física `DIO-013` [#13](https://github.com/beckerin/donate.io/issues/13)
 - Criação do banco de dados `DIO-014` [#14](https://github.com/beckerin/donate.io/issues/14)
-- Create database `DIO-015` [#15](https://github.com/beckerin/donate.io/issues/15)
-- Create table `DIO-016` [#16](https://github.com/beckerin/donate.io/issues/16)
-- Inserts para testes de consultas `DIO-017` [#17](https://github.com/beckerin/donate.io/issues/17)
+- Create database and table`DIO-015` [#15](https://github.com/beckerin/donate.io/issues/15)
+- Inserts para testes de consultas `DIO-016` [#16](https://github.com/beckerin/donate.io/issues/16)
 
 - Consultas SQL simples utilizando as clausulas <!-- TODO: Criar issue--> 
   - select 
