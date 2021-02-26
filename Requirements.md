@@ -67,12 +67,18 @@ idTipoFk    | `int`      | `default` | SIM         | NÃO      | TODO: [#5](http
 
 
 ###Administrador
-
-####Dados
-- TODO: `DIO-006 `[#6](https://github.com/beckerin/donate.io/issues/6)
-
+ - Será um dos `tipos de usuário`.
 
 ####Funções
 - Poderá `criar` `alterar` `remover` `campanhas` ou `usuários`.
 - Ficará a cargo de `verificar` cada `campanha` para ser publicamente `iniciada`.
 - Deverá `editar` ou `excluir` `campanhas` ou `comentários` que fujam das regras ou conforme necessidade.
+
+
+###Endereço
+####Dados
+####Funções
+
+###Tipos de Usuários
+####Dados
+####Funções
