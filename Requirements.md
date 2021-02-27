@@ -10,7 +10,7 @@ titulo      | `string`   | `256`     | SIM         | SIM      | Titulo da campan
 descricao   | `string`   | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
 dataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
-|||||
+||
 idUsuarioPk | `int`      | `default` | SIM         | SIM      | [Id do Author](#Usuários)
 
 ####Funções
@@ -46,7 +46,7 @@ email       | `string`   | `256`     | SIM         | SIM      | Email do usuári
 cpf         | `long`     | `11`      | SIM         | SIM      | CPF do usuário.
 dataCriado  | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
 verificado  | `boolean`  | `default` | SIM         | SIM      | Variável para identificar email verificado.   
-|||||
+||
 idEnderecoFk| `int`      | `default` | SIM         | SIM      | [Id do Endereço](#Endereço)
 idTipoFk    | `int`      | `default` | SIM         | SIM      | [Id do Tipo de usuário](#Tipos de Usuários)
 
@@ -81,12 +81,23 @@ Tipos de `Usuário`:
        - Pode alterar o seu próprio `Usuário`.
        - `Não` podem apagar o seu próprio `usuário`.
        - Pode alterar a sua própria `Campanha`.
+       - Pode alterar os seus próprios comentários em `Campanhas`.
   
 
   3. Desabilitado.
      - Deixará de poder fazer `login` e perderá todos os privilégios do tipo normal.
      - Será usado como forma de `deletar` o usuário.
 
+###Comentários
+####Dados
+NOME          | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---          | ---        | ---       | ---         | ---      | --- 
+idComentarioPk| `int`      | `default` | SIM         | SIM      | Id do comentario.
+descricao     | `string`   | `512`     | SIM         | SIM      | Conteudo do comentário.
+dataCriado    | `Date`     | `default` | SIM         | SIM      | Data que foi feito o comentário.
+ativo         | `boolean`  | `default` | SIM         | SIM      | Comentário está visível.
+||
+idUsuarioFk   | `int`      | `default` | SIM         | SIM      | [Id responsável](#Usuários).
 
 ###Endereço
 ####Dados
@@ -97,7 +108,7 @@ rua         | `string`   | `64`      | SIM         | SIM      | Nome de sua rua/
 cep         | `number`   | `9`       | SIM         | SIM      | Numero do seu CEP
 bairro      | `string`   | `128`     | NÃO         | SIM      | Nome de seu bairro
 complemento | `string`   | `128`     | NÃO         | SIM      | Complemento de seu endereço
-||||||
+||
 idCidadeFk  | `int`      | `default` | SIM         | SIM      | [Id da cidade](#Cidades)
 idEstadoFk  | `int`      | `default` | SIM         | SIM      | [Id do estado](#Estados)
 
@@ -119,12 +130,13 @@ nome        | `string`   | `19`      | SIM         | SIM      | Nome do estado.
 
 ###Alterações
 ####Dados
-NOME         | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---         | ---        | ---       | ---         | ---      | --- 
-idAlteracaoPk| `int`      | `default` | SIM         | SIM      | Id da alteração.
-antes        | `json`     | `default` | SIM         | SIM      | Campanha `antes` da alteração
-depois       | `json`     | `default` | SIM         | SIM      | Campanha `após` da alteração
-data         | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
-||||||
-idCampanhaFk | `int`      | `default` | SIM         | SIM      | [Id da campanha alterada](#Campanha).
-idUsuarioFk  | `int`      | `default` | SIM         | SIM      | [Id responsável pela](#Usuários). 
+NOME          | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---          | ---        | ---       | ---         | ---      | --- 
+idAlteracaoPk | `int`      | `default` | SIM         | SIM      | Id da alteração.
+antes         | `json`     | `default` | SIM         | SIM      | Objeto `antes` da alteração
+depois        | `json`     | `default` | SIM         | SIM      | Objeto `após` da alteração
+data          | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
+||
+idCampanhaFk  | `int`      | `default` | NÃO         | SIM      | [Id da campanha alterada](#Campanha).
+idComentarioFk| `int`      | `default` | NÃO         | SIM      | [Id do comentário alterado](#Comentários).
+idUsuarioFk   | `int`      | `default` | SIM         | SIM      | [Id responsável](#Usuários). 
