@@ -12,6 +12,9 @@ Podemos utilizar Vakinha como um exemplo de negócio.
 - [Link](https://github.com/beckerin/donate.io/blob/dev/Requirements.md)
 
 
+*Diagrama de Entidade
+![img.png](img.png)
+
 As `issues` que serão as tarefas a serem feitas, serão gerenciadas pelo próprio `Github`.
 São formadas pelo pre-fixo do projeto, seu numero de ordenação e breve titulo. Ex:
 
