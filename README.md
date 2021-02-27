@@ -8,11 +8,11 @@ Estudo de caso:
 A plataforma tem como objetivo receber doações de usuários.
 Podemos utilizar Vakinha como um exemplo de negócio.
 
-#Lista de requerimentos
+### Lista de requerimentos
 - [Link](https://github.com/beckerin/donate.io/blob/dev/Requirements.md)
 
 
-*Diagrama de Entidade
+#### Diagrama de Entidade
 ![img.png](img.png)
 
 As `issues` que serão as tarefas a serem feitas, serão gerenciadas pelo próprio `Github`.
