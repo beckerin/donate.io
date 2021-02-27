@@ -1,8 +1,8 @@
-#Lista de requerimentos
+# Lista de requerimentos
 
-###Campanha
+### Campanha
 
-####Dados
+#### Dados
  NOME       | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO 
  ---        | ---        | ---       | ---         | ---      | --- 
 idCampanhaPk| `int`      | `default` | SIM         | SIM      | Id principal da campanha.  
@@ -13,7 +13,7 @@ dataPrazo   | `Date`     | `default` | SIM         | SIM      | Data de conclus�
 ||
 idUsuarioPk | `int`      | `default` | SIM         | SIM      | [Id do Author](#Usuários)
 
-####Funções
+#### Funções
 - Poderão ser criadas `APENAS` por `Usuários` previamente cadastrados.
 - Poderão ser alteradas por necessidade ou para complementar informação a mesma necessita aprovação do `Administrador`.
 - Poderão ter o seu prazo alterado para finalização imediata, caso tenha o seu objetivo alcançado.
@@ -34,9 +34,9 @@ idUsuarioPk | `int`      | `default` | SIM         | SIM      | [Id do Author](#
   - Ficar com o `Autor` da `Campanha`
 
 
-###Usuários
+### Usuários
 
-####Dados
+#### Dados
 NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
 idUsuarioPk | `int`      | `default` | SIM         | SIM      | Id do usuário.
@@ -50,17 +50,17 @@ verificado  | `boolean`  | `default` | SIM         | SIM      | Variável para i
 idEnderecoFk| `int`      | `default` | SIM         | SIM      | [Id do Endereço](#Endereço)
 idTipoFk    | `int`      | `default` | SIM         | SIM      | [Id do Tipo de usuário](#Tipos de Usuários)
 
-####Funções
+#### Funções
 - Poderão ser `criados` a partir de usuários não logados.
 
-###Tipos de Usuários
-####Dados
+### Tipos de Usuários
+#### Dados
 NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
 idTipoPk    | `int`      | `default` | SIM         | SIM      | Id tipo de usuário.
 nome        | `string`   | `13`      | SIM         | SIM      | Nome do tipo do usuário.
 
-####Funções
+#### Funções
 Tipos de `Usuário`:
   0. Administrador: Controle total sobre o sistema.
      - Poderá `criar` `alterar` `remover` `campanhas` ou `usuários`.
@@ -88,8 +88,8 @@ Tipos de `Usuário`:
      - Deixará de poder fazer `login` e perderá todos os privilégios do tipo normal.
      - Será usado como forma de `deletar` o usuário.
 
-###Comentários
-####Dados
+### Comentários
+#### Dados
 NOME          | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---          | ---        | ---       | ---         | ---      | --- 
 idComentarioPk| `int`      | `default` | SIM         | SIM      | Id do comentario.
@@ -99,8 +99,8 @@ ativo         | `boolean`  | `default` | SIM         | SIM      | Comentário es
 ||
 idUsuarioFk   | `int`      | `default` | SIM         | SIM      | [Id responsável](#Usuários).
 
-###Endereço
-####Dados
+### Endereço
+#### Dados
 NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
 idEnderecoPk| `int`      | `default` | SIM         | SIM      | Id do endereço.
@@ -113,23 +113,23 @@ idCidadeFk  | `int`      | `default` | SIM         | SIM      | [Id da cidade](#
 idEstadoFk  | `int`      | `default` | SIM         | SIM      | [Id do estado](#Estados)
 
 
-###Cidades
-####Dados
+### Cidades
+#### Dados
 NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
 idCidadePk  | `int`      | `default` | SIM         | SIM      | Id da cidade.
 nome        | `string`   | `29`      | SIM         | SIM      | Nome da cidade.
 
-###Estados
-####Dados
+### Estados
+#### Dados
 NOME        | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
 idEstadoPk  | `int`      | `default` | SIM         | SIM      | Id do estado.
 nome        | `string`   | `19`      | SIM         | SIM      | Nome do estado.
 
 
-###Alterações
-####Dados
+### Alterações
+#### Dados
 NOME          | VALOR      | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---          | ---        | ---       | ---         | ---      | --- 
 idAlteracaoPk | `int`      | `default` | SIM         | SIM      | Id da alteração.
