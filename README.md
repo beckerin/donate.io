@@ -6,7 +6,7 @@ Estudo de caso:
  Plataforma de Doações.
 
 A plataforma tem como objetivo receber doações de usuários.
-Podemos utilizar Vakinha como um exemplo de negócio.
+Podemos utilizar [Sharity](https://sharity.com.br/) como um exemplo de negócio.
 
 O negócios irá girar em torno de campanhas com prazos pré-estabelecidos e verificado por um Administrador.
 
