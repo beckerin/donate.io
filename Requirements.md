@@ -182,7 +182,6 @@ nome        | `varchar`  | `19`      | SIM         | SIM      | Nome do estado.
 NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---          | ---        | ---       | ---         | ---      | --- 
 idAlteracaoPk | `integer`  | `default` | SIM         | SIM      | Id da alteração.
-
 antes         | `json`     | `default` | SIM         | SIM      | Objeto `antes` da alteração
 depois        | `json`     | `default` | SIM         | SIM      | Objeto `após` da alteração
 data          | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
