@@ -8,6 +8,8 @@
 idCampanhaPk  | `integer`  | `default` | SIM         | SIM      | Id principal da campanha.  
 titulo        | `varchar`  | `256`     | SIM         | SIM      | Titulo da campanha.
 descricao     | `varchar`  | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
+meta          | `integer`  | `default` | SIM         | SIM      | Meta da campanha.
+realizado     | `boolean`  | `default` | SIM         | SIM      | Variável para definir se a campanha foi ou nao concluida.
 dataCriado    | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
 dataPrazo     | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
 dataVerificado| `Date`     | `default` | SIM         | SIM      | Data que a doação foi solicatada.
@@ -98,7 +100,6 @@ dataVerificado| `Date`     | `default` | SIM         | SIM      | Data que o usu
 idEnderecoFk  | `integer`  | `default` | SIM         | SIM      | [Id do Endereço](#endereço)
 idTipoFk      | `integer`  | `default` | SIM         | SIM      | [Id do Tipo de usuário](#tipo-de-usuário)
 
-
 #### Funções
 - Poderão ser `criados` a partir de usuários não logados.
 
@@ -161,6 +162,7 @@ complemento | `varchar`  | `128`     | NÃO         | SIM      | Complemento de 
 ||
 idCidadeFk  | `integer`  | `default` | SIM         | SIM      | [Id da cidade](#cidades)
 idEstadoFk  | `integer`  | `default` | SIM         | SIM      | [Id do estado](#estados)
+
 
 ### Cidades
 #### Dados
