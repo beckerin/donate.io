@@ -98,6 +98,7 @@ dataVerificado| `Date`     | `default` | SIM         | SIM      | Data que o usu
 idEnderecoFk  | `integer`  | `default` | SIM         | SIM      | [Id do Endereço](#endereço)
 idTipoFk      | `integer`  | `default` | SIM         | SIM      | [Id do Tipo de usuário](#tipo-de-usuário)
 
+
 #### Funções
 - Poderão ser `criados` a partir de usuários não logados.
 
@@ -161,7 +162,6 @@ complemento | `varchar`  | `128`     | NÃO         | SIM      | Complemento de 
 idCidadeFk  | `integer`  | `default` | SIM         | SIM      | [Id da cidade](#cidades)
 idEstadoFk  | `integer`  | `default` | SIM         | SIM      | [Id do estado](#estados)
 
-
 ### Cidades
 #### Dados
 NOME        | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
@@ -182,6 +182,7 @@ nome        | `varchar`  | `19`      | SIM         | SIM      | Nome do estado.
 NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---          | ---        | ---       | ---         | ---      | --- 
 idAlteracaoPk | `integer`  | `default` | SIM         | SIM      | Id da alteração.
+
 antes         | `json`     | `default` | SIM         | SIM      | Objeto `antes` da alteração
 depois        | `json`     | `default` | SIM         | SIM      | Objeto `após` da alteração
 data          | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
