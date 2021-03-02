@@ -8,6 +8,8 @@
 idCampanhaPk  | `integer`  | `default` | SIM         | SIM      | Id principal da campanha.  
 titulo        | `varchar`  | `256`     | SIM         | SIM      | Titulo da campanha.
 descricao     | `varchar`  | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
+meta          | `integer`  | `default` | SIM         | SIM      | Meta da campanha.
+realizado     | `boolean`  | `default` | SIM         | SIM      | Variável para definir se a campanha foi ou nao concluida.
 dataCriado    | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
 dataPrazo     | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
 dataVerificado| `Date`     | `default` | SIM         | SIM      | Data que a doação foi solicatada.
