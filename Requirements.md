@@ -3,18 +3,18 @@
 ### Campanha
 
 #### Dados
- NOME         | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO 
- ---          | ---        | ---       | ---         | ---      | --- 
-idCampanhaPk  | `integer`  | `default` | SIM         | SIM      | Id principal da campanha.  
-titulo        | `varchar`  | `256`     | SIM         | SIM      | Titulo da campanha.
-descricao     | `varchar`  | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
-meta          | `integer`  | `default` | SIM         | SIM      | Meta da campanha.
-realizado     | `boolean`  | `default` | SIM         | SIM      | Variável para definir se a campanha foi ou nao concluida.
-dataCriado    | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
-dataPrazo     | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
-dataVerificado| `Date`     | `default` | SIM         | SIM      | Data que a doação foi solicatada.
+ NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO 
+ ---           | ---        | ---       | ---         | ---      | --- 
+id_campanha_pk | `integer`  | `default` | SIM         | SIM      | Id principal da campanha.  
+titulo         | `varchar`  | `256`     | SIM         | SIM      | Titulo da campanha.
+descricao      | `varchar`  | `1024`    | SIM         | SIM      | Descição da campanha em detalhes.
+meta           | `integer`  | `default` | SIM         | SIM      | Meta da campanha.
+realizado      | `boolean`  | `default` | SIM         | SIM      | Variável para definir se a campanha foi ou nao concluida.
+data_criado    | `Date`     | `default` | SIM         | SIM      | Data que a campanha foi criada.
+data_prazo     | `Date`     | `default` | SIM         | SIM      | Data de conclusão da campanha.
+data_verificado| `Date`     | `default` | SIM         | SIM      | Data que a doação foi solicatada.
 ||
-idUsuarioPk   | `integer`  | `default` | SIM         | SIM      | [Id do Author](#Usuários)
+id_usuario_fk  | `integer`  | `default` | SIM         | SIM      | [Id do Author](#Usuários)
 
 #### Funções
 - Poderão ser criadas `APENAS` por `Usuários` previamente cadastrados.
@@ -38,26 +38,26 @@ idUsuarioPk   | `integer`  | `default` | SIM         | SIM      | [Id do Author]
 
 ### Doacao
 #### Dados
-NOME               | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---               | ---        | ---       | ---         | ---      | --- 
-idDoacaoPk         | `integer`  | `default` | SIM         | SIM      | ID da doação
-valorCentavos      | `integer`  | `default` | SIM         | SIM      | Valor da doação
-mensagem           | `varchar`  | `1024`    | NAO         | SIM      | Mensagem embutida na doação.
-dataCriado         | `Date`     | `default` | SIM         | SIM      | Data que a doação foi solicatada.
-dataConcluido      | `Date`     | `default` | NAO         | SIM      | Data que a doação foi concluida.
+NOME                  | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---                  | ---        | ---       | ---         | ---      | --- 
+id_doacao_pk          | `integer`  | `default` | SIM         | SIM      | ID da doação
+valor_centavos        | `integer`  | `default` | SIM         | SIM      | Valor da doação
+mensagem              | `varchar`  | `1024`    | NAO         | SIM      | Mensagem embutida na doação.
+data_criado           | `Date`     | `default` | SIM         | SIM      | Data que a doação foi solicatada.
+data_concluido        | `Date`     | `default` | NAO         | SIM      | Data que a doação foi concluida.
 ||
-idStatusPagamentoFk| `integer`  | `default` | SIM         | SIM      | [ID do tipo de pagamento](#status-de-pagamento)
-idTipoPagamentoFk  | `integer`  | `default` | SIM         | SIM      | [ID do tipo de pagamento](#tipo-de-Pagamento)
-idCampanhaFk       | `integer`  | `default` | SIM         | SIM      | [Id do Campanha](#campanha)
-idUsuarioFk        | `integer`  | `default` | SIM         | SIM      | [Id do Usuário](#usuários)
+id_status_pagamento_fk| `integer`  | `default` | SIM         | SIM      | [ID do tipo de pagamento](#status-de-pagamento)
+id_tipo_pagamento_fk  | `integer`  | `default` | SIM         | SIM      | [ID do tipo de pagamento](#tipo-de-Pagamento)
+id_campanha_fk        | `integer`  | `default` | SIM         | SIM      | [Id do Campanha](#campanha)
+id_usuario_fk         | `integer`  | `default` | SIM         | SIM      | [Id do Usuário](#usuários)
 
 
 ### Status de Pagamento
 #### Dados
-NOME               | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---               | ---        | ---       | ---         | ---      | --- 
-idTipoPagamentoPk  | `integer`  | `default` | SIM         | SIM      | ID do status de pagamento.
-descricao          | `varchar`  | `1024`    | SIM         | SIM      | Descrição do status de pagamento. 
+NOME                | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---                | ---        | ---       | ---         | ---      | --- 
+id_tipo_pagamento_pk| `integer`  | `default` | SIM         | SIM      | ID do status de pagamento.
+descricao           | `varchar`  | `1024`    | SIM         | SIM      | Descrição do status de pagamento. 
 
 ### Função
 - Será responsavel por avaliar caso a doação está:
@@ -69,11 +69,11 @@ descricao          | `varchar`  | `1024`    | SIM         | SIM      | Descriç�
 
 ### Tipo de Pagamento
 #### Dados
-NOME             | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---             | ---        | ---       | ---         | ---      | --- 
-idTipoPagamentoPk| `integer`  | `default` | SIM         | SIM      | ID do tipo de pagamento
-descricao        | `varchar`  | `16`      | SIM         | SIM      | Descrição do tipo de pagamento
-ativo            | `boolean`  | `default` | SIM         | SIM      | Variável para definir se pagamento está disponível ou não.
+NOME                | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---                | ---        | ---       | ---         | ---      | --- 
+id_tipo_pagamento_pk| `integer`  | `default` | SIM         | SIM      | ID do tipo de pagamento
+descricao           | `varchar`  | `16`      | SIM         | SIM      | Descrição do tipo de pagamento
+ativo               | `boolean`  | `default` | SIM         | SIM      | Variável para definir se pagamento está disponível ou não.
 
 ### Função
 - Será responsável por definir quais os métodos de pagamentos estarão disponíveis.
@@ -86,19 +86,19 @@ ativo            | `boolean`  | `default` | SIM         | SIM      | Variável p
 
 ### Usuários
 #### Dados
-NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---          | ---        | ---       | ---         | ---      | --- 
-idUsuarioPk   | `integer`  | `default` | SIM         | SIM      | Id do usuário.
-nome          | `varchar`  | `256`     | SIM         | SIM      | Nome do usuário.
-apelido       | `varchar`  | `256`     | NÃO         | SIM      | Apelido do usuário.
-email         | `varchar`  | `256`     | SIM         | SIM      | Email do usuário.
-cpf           | `long`     | `11`      | SIM         | SIM      | CPF do usuário.
-dataCriado    | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
-verificado    | `boolean`  | `default` | SIM         | SIM      | Variável para identificar email verificado.
-dataVerificado| `Date`     | `default` | SIM         | SIM      | Data que o usuário foi verificado.   
+NOME           | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---           | ---        | ---       | ---         | ---      | --- 
+id_usuario_pk  | `integer`  | `default` | SIM         | SIM      | Id do usuário.
+nome           | `varchar`  | `256`     | SIM         | SIM      | Nome do usuário.
+apelido        | `varchar`  | `256`     | NÃO         | SIM      | Apelido do usuário.
+email          | `varchar`  | `256`     | SIM         | SIM      | Email do usuário.
+cpf            | `long`     | `11`      | SIM         | SIM      | CPF do usuário.
+data_criado    | `Date`     | `default` | SIM         | SIM      | Data que o usuário foi criado.
+verificado     | `boolean`  | `default` | SIM         | SIM      | Variável para identificar email verificado.
+data_verificado| `Date`     | `default` | SIM         | SIM      | Data que o usuário foi verificado.   
 ||
-idEnderecoFk  | `integer`  | `default` | SIM         | SIM      | [Id do Endereço](#endereço)
-idTipoFk      | `integer`  | `default` | SIM         | SIM      | [Id do Tipo de usuário](#tipo-de-usuário)
+id_endereco_fk | `integer`  | `default` | SIM         | SIM      | [Id do Endereço](#endereço)
+id_tipo_fk     | `integer`  | `default` | SIM         | SIM      | [Id do Tipo de usuário](#tipo-de-usuário)
 
 #### Funções
 - Poderão ser `criados` a partir de usuários não logados.
@@ -107,7 +107,7 @@ idTipoFk      | `integer`  | `default` | SIM         | SIM      | [Id do Tipo de
 #### Dados
 NOME        | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
-idTipoPk    | `integer`  | `default` | SIM         | SIM      | Id tipo de usuário.
+id_tipo_pk  | `integer`  | `default` | SIM         | SIM      | Id tipo de usuário.
 nome        | `varchar`  | `13`      | SIM         | SIM      | Nome do tipo do usuário.
 
 #### Funções
@@ -140,54 +140,54 @@ Tipos de `Usuário`:
 
 ### Comentários
 #### Dados
-NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---          | ---        | ---       | ---         | ---      | --- 
-idComentarioPk| `integer`  | `default` | SIM         | SIM      | Id do comentario.
-descricao     | `varchar`  | `512`     | SIM         | SIM      | Conteudo do comentário.
-dataCriado    | `Date`     | `default` | SIM         | SIM      | Data que foi feito o comentário.
-ativo         | `boolean`  | `default` | SIM         | SIM      | Comentário está visível.
+NOME            | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---            | ---        | ---       | ---         | ---      | --- 
+id_comentario_pk| `integer`  | `default` | SIM         | SIM      | Id do comentario.
+descricao       | `varchar`  | `512`     | SIM         | SIM      | Conteudo do comentário.
+dataCriado      | `Date`     | `default` | SIM         | SIM      | Data que foi feito o comentário.
+ativo           | `boolean`  | `default` | SIM         | SIM      | Comentário está visível.
 ||
-idUsuarioFk   | `integer`  | `default` | SIM         | SIM      | [Id responsável](#usuários).
+id_usuario_fk   | `integer`  | `default` | SIM         | SIM      | [Id responsável](#usuários).
 
 ### Endereço
 #### Dados
-NOME        | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---        | ---        | ---       | ---         | ---      | --- 
-idEnderecoPk| `integer`  | `default` | SIM         | SIM      | Id do endereço.
-rua         | `varchar`  | `64`      | SIM         | SIM      | Nome de sua rua/avenida
-numero      | `integer`  | `6`       | SIM         | SIM      | Numero de sua residência.
-cep         | `integer`  | `9`       | SIM         | SIM      | Numero do seu CEP
-bairro      | `varchar`  | `128`     | NÃO         | SIM      | Nome de seu bairro
-complemento | `varchar`  | `128`     | NÃO         | SIM      | Complemento de seu endereço
+NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---          | ---        | ---       | ---         | ---      | --- 
+id_endereco_pk| `integer`  | `default` | SIM         | SIM      | Id do endereço.
+rua           | `varchar`  | `64`      | SIM         | SIM      | Nome de sua rua/avenida
+numero        | `integer`  | `6`       | SIM         | SIM      | Numero de sua residência.
+cep           | `integer`  | `9`       | SIM         | SIM      | Numero do seu CEP
+bairro        | `varchar`  | `128`     | NÃO         | SIM      | Nome de seu bairro
+complemento   | `varchar`  | `128`     | NÃO         | SIM      | Complemento de seu endereço
 ||
-idCidadeFk  | `integer`  | `default` | SIM         | SIM      | [Id da cidade](#cidades)
-idEstadoFk  | `integer`  | `default` | SIM         | SIM      | [Id do estado](#estados)
+id_cidade_fk  | `integer`  | `default` | SIM         | SIM      | [Id da cidade](#cidades)
+id_estado_fk  | `integer`  | `default` | SIM         | SIM      | [Id do estado](#estados)
 
 
 ### Cidades
 #### Dados
 NOME        | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
-idCidadePk  | `integer`  | `default` | SIM         | SIM      | Id da cidade.
+id_cidade_pk| `integer`  | `default` | SIM         | SIM      | Id da cidade.
 nome        | `varchar`  | `29`      | SIM         | SIM      | Nome da cidade.
 
 ### Estados
 #### Dados
 NOME        | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
  ---        | ---        | ---       | ---         | ---      | --- 
-idEstadoPk  | `integer`  | `default` | SIM         | SIM      | Id do estado.
+id_estado_pk| `integer`  | `default` | SIM         | SIM      | Id do estado.
 nome        | `varchar`  | `19`      | SIM         | SIM      | Nome do estado.
 
 
 ### Alteracao
 #### Dados
-NOME          | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
- ---          | ---        | ---       | ---         | ---      | --- 
-idAlteracaoPk | `integer`  | `default` | SIM         | SIM      | Id da alteração.
-antes         | `json`     | `default` | SIM         | SIM      | Objeto `antes` da alteração
-depois        | `json`     | `default` | SIM         | SIM      | Objeto `após` da alteração
-data          | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
+NOME            | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
+ ---            | ---        | ---       | ---         | ---      | --- 
+id_alteracao_pk | `integer`  | `default` | SIM         | SIM      | Id da alteração.
+antes           | `json`     | `default` | SIM         | SIM      | Objeto `antes` da alteração
+depois          | `json`     | `default` | SIM         | SIM      | Objeto `após` da alteração
+data            | `Date`     | `default` | SIM         | SIM      | Data que a alteração ocorreu.
 ||
-idCampanhaFk  | `integer`  | `default` | NÃO         | SIM      | [Id da campanha alterada](#campanha).
-idComentarioFk| `integer`  | `default` | NÃO         | SIM      | [Id do comentário alterado](#comentários).
-idUsuarioFk   | `integer`  | `default` | SIM         | SIM      | [Id responsável](#usuários). 
+id_campanha_fk  | `integer`  | `default` | NÃO         | SIM      | [Id da campanha alterada](#campanha).
+id_comentario_fk| `integer`  | `default` | NÃO         | SIM      | [Id do comentário alterado](#comentários).
+id_usuario_fk   | `integer`  | `default` | SIM         | SIM      | [Id responsável](#usuários). 
