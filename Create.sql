@@ -6,7 +6,7 @@ CREATE TABLE Campanha (
                           descricao varchar(1024),
                           data_criado date,
                           data_prazo date,
-                          data_verificado boolean,
+                          data_verificado date,
                           realizado boolean,
                           meta INT,
                           fk_Usuario_id_usuario INT
