@@ -20,7 +20,7 @@ CREATE TABLE Usuario (
                          cpf INT,
                          data_criado date,
                          verificado bool,
-                         data_verificado boolean,
+                         data_verificado date,
                          fk_TipoUsuario_id_tipo int,
                          fk_Endereco_id_endereco INT
 );
