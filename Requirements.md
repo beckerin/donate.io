@@ -93,7 +93,6 @@ ativo                        | `boolean`  | `default` | SIM         | SIM      |
 ||
 fk_usuario_id_usuario        | `int`      | `default` | SIM         | SIM      | [Id responsável](#usuários).
 
-
 ### Alteracao
 #### Dados
 NOME                         | TIPO       | TAMANHO   | OBRIGATÓRIO | COMPLETO | DESCRIÇÃO
@@ -106,7 +105,6 @@ data                         | `Date`     | `default` | SIM         | SIM      |
 fk_campanha_id_campanha      | `int`      | `default` | NÃO         | SIM      | [Id da campanha alterada](#campanha).
 fk_comentario_id_comentario  | `int`      | `default` | NÃO         | SIM      | [Id do comentário alterado](#comentários).
 fk_usuario_id_usuario        | `int`      | `default` | SIM         | SIM      | [Id responsável](#usuários).
-
 
 ### Endereço
 #### Dados

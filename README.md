@@ -14,6 +14,8 @@ Podemos utilizar Vakinha como um exemplo de negócio.
 
 #### Diagrama de Entidade
 ![img.png](diagrama-entidade.png)
+### Diagrama Lógico
+![img.png](diagramaLogico.png)
 
 As `issues` que serão as tarefas a serem feitas, serão gerenciadas pelo próprio `Github`.
 São formadas pelo pre-fixo do projeto, seu numero de ordenação e breve titulo. Ex:
